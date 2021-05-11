@@ -1,0 +1,17 @@
+{
+    "name": "pinge/pinge-coding-standard",
+    "description": "The Pinge coding standard.",
+    "type": "phpcodesniffer-standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pinge",
+            "email": "hello@pinge.app"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "slevomat/coding-standard": "^6.3"
+    }
+}

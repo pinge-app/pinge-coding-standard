@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<ruleset
+    name="Pinge"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+    <config name="installed_paths" value="../../slevomat/coding-standard" />
+
+    <!-- Fully require PSR-2 except for the fact that every file should contain a class. -->
+	<rule ref="PSR2">
+		<exclude name="PSR1.Classes.ClassDeclaration" />
+	</rule>
+
+    <!-- Class property comments are required. -->
+    <rule ref="Squiz.Commenting.VariableComment" />
+
+    <!-- Function commenting is required. -->
+	<rule ref="Squiz.Commenting.FunctionComment">
+		<exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
+	</rule>
+
+    <!-- Throw tag is required for exceptions in functions. -->
+	<rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
+
+    <!-- Strict typing is required. -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property
+                name="newlinesCountBetweenOpenTagAndDeclare"
+                value="1" />
+            <property
+                name="spacesCountAroundEqualsSign"
+                value="1" />
+            <property
+                name="newlinesCountAfterDeclare"
+                value="2" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators" />
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses" />
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
+
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEmpty" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable" />
+    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch" />
+    <rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement" />
+    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousTraitNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration" />
+    <rule ref="SlevomatCodingStandard.Functions.DisallowEmptyFunction" />
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration" />
+    <rule ref="SlevomatCodingStandard.PHP.ShortList" />
+    <rule ref="SlevomatCodingStandard.PHP.TypeCast" />
+    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
+    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse" />
+    <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
+    <rule ref="SlevomatCodingStandard.Classes.MethodSpacing">
+        <properties>
+            <property
+                name="minLinesCount"
+                value="1" />
+            <property
+                name="maxLinesCount"
+                value="1" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+        <properties>
+            <property
+                name="linesCountBeforeFirstUse"
+                value="0" />
+            <property
+                name="linesCountBetweenUses"
+                value="0" />
+            <property
+                name="linesCountAfterLastUseWhenLastInClass"
+                value="0" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
+        <properties>
+            <property
+                name="linesCountAfterOpeningBrace"
+                value="0" />
+            <property
+                name="linesCountBeforeClosingBrace"
+                value="0" />
+        </properties>
+    </rule>
+
+	<exclude-pattern>bootstrap/cache/*</exclude-pattern>
+	<exclude-pattern>public/*</exclude-pattern>
+	<exclude-pattern>resources/*</exclude-pattern>
+	<exclude-pattern>storage/*</exclude-pattern>
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>tests/*</exclude-pattern>
+	<exclude-pattern>node_modules/*</exclude-pattern>
+</ruleset>
