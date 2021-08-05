@@ -12,6 +12,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "slevomat/coding-standard": "^6.3"
+        "slevomat/coding-standard": "^7.0.9"
     }
 }

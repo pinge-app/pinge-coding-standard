@@ -25,14 +25,14 @@
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property
-                name="newlinesCountBetweenOpenTagAndDeclare"
-                value="1" />
+                name="linesCountBeforeDeclare"
+                value="0" />
             <property
                 name="spacesCountAroundEqualsSign"
                 value="1" />
             <property
-                name="newlinesCountAfterDeclare"
-                value="2" />
+                name="linesCountAfterDeclare"
+                value="1" />
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator" />
