@@ -95,6 +95,13 @@
         </properties>
     </rule>
 
+    <!-- Typehinting is required. -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+        <!-- Exclude the useless annotation sniff. -->
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation"/>
+    </rule>
+
 	<exclude-pattern>bootstrap/cache/*</exclude-pattern>
 	<exclude-pattern>public/*</exclude-pattern>
 	<exclude-pattern>resources/*</exclude-pattern>
